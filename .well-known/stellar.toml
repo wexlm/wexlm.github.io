@@ -1,14 +1,14 @@
 # --------------------------------------------------------------------
 # WEXLM – Stellar asset metadata
 # --------------------------------------------------------------------
-VERSION            = "2.0.0"
+VERSION            = "2.2.0"
 NETWORK_PASSPHRASE = "Public Global Stellar Network ; September 2015"
 
 # --------------------------------------------------------------------
 # Accounts
 # --------------------------------------------------------------------
 ACCOUNTS = [
-  "GBYGO5OUQW7SNTB3HKDACAYO7VCWGJTBBPQNMATJ7H6KS62V4USDU4WV" , "GD2H7QNHWZWKWW2WQTXLRMEG33RN5BFZLVQJPUXINOYKRMQXAATY2ABA"
+"GBYGO5OUQW7SNTB3HKDACAYO7VCWGJTBBPQNMATJ7H6KS62V4USDU4WV" , "GD2H7QNHWZWKWW2WQTXLRMEG33RN5BFZLVQJPUXINOYKRMQXAATY2ABA"
 ]
 
 # --------------------------------------------------------------------
@@ -16,7 +16,7 @@ ACCOUNTS = [
 # --------------------------------------------------------------------
 [DOCUMENTATION]
 ORG_NAME        = "WEXLM"
-ORG_URL         = "https://wexlm.github.io"
+ORG_URL         = "https://wexlm.github.io/"
 ORG_LOGO        = "https://wexlm.github.io/assets/wexlm.png"
 ORG_DBA         = "88 Colin P Kelly Jr St, San Francisco, CA 94107, USA"
 ORG_DESCRIPTION = "Smart Contract Utilities for Assets on Stellar Blockchain (XLM-based)"
