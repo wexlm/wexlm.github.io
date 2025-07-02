@@ -1,145 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Coming Soon - WEXLM</title>
-  <style>
-    
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      height: 100vh;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364);
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      text-align: center;
-      position: relative;
-    }
-
-    .overlay {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.4);
-      backdrop-filter: blur(4px);
-      z-index: 1;
-    }
-
-    .content {
-      z-index: 2;
-      max-width: 90%;
-      padding: 2rem;
-      animation: fadeInUp 1.5s ease forwards;
-    }
-
-    h1 {
-      font-size: 3rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      letter-spacing: 2px;
-      animation: shine 3s infinite;
-    }
-
-    @keyframes shine {
-      0% { background-position: -500px 0; }
-      100% { background-position: 500px 0; }
-    }
-
-    p {
-      font-size: 1.2rem;
-      max-width: 600px;
-      margin: 0 auto 2rem;
-      line-height: 1.6;
-      opacity: 0.9;
-    }
-
-    .email-form input[type="email"] {
-      padding: 0.8rem 1rem;
-      border: none;
-      border-radius: 4px;
-      width: 80%;
-      max-width: 300px;
-      margin-right: 0.5rem;
-      outline: none;
-      font-size: 1rem;
-    }
-
-    .email-form button {
-      padding: 0.8rem 1.2rem;
-      border: none;
-      border-radius: 4px;
-      background-color: #00d2ff;
-      color: #fff;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-
-    .email-form button:hover {
-      background-color: #00aaff;
-    }
-
-    footer {
-      position: center;
-      bottom: 1rem;
-      font-size: 0.9rem;
-      opacity: 0.6;
-      margin-top: 2.5rem;
-    }
-
-    @keyframes fadeInUp {
-      0% {
-        transform: translateY(40px);
-        opacity: 0;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WEXLM - Token Details</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#c6a455", secondary: "#8a7340" },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      :where([class^="ri-"])::before { content: "\f3c2"; }
+      body {
+          font-family: 'Inter', sans-serif;
+          background-color: #f9f9f9;
       }
-      100% {
-        transform: translateY(0);
-        opacity: 1;
+      .gradient-text {
+          background: linear-gradient(135deg, #c6a455 0%, #e2c675 50%, #c6a455 100%);
+          -webkit-background-clip: text;
+          background-clip: text;
+          color: transparent;
       }
-    }
-
-    body::before {
-      content: '';
-      position: absolute;
-      width: 200%;
-      height: 200%;
-      background: repeating-radial-gradient(circle, rgba(255,255,255,0.05) 0, rgba(255,255,255,0.05) 2px, transparent 2px, transparent 80%) 0 0 / 20px 20px;
-      animation: moveBG 30s linear infinite;
-      z-index: 0;
-    }
-
-    @keyframes moveBG {
-      from {
-        transform: rotate(0deg);
+      .gold-border {
+          border: 1px solid #c6a455;
       }
-      to {
-        transform: rotate(360deg);
+      .gold-gradient {
+          background: linear-gradient(135deg, #c6a455 0%, #e2c675 50%, #c6a455 100%);
       }
-    }
-  </style>
-</head>
-<body>
-  <div class="overlay"></div>
-  <div class="content">
-    <h1>Coming Soon</h1>
-    <p>We're working hard to bring you something amazing. Stay tuned for updates, new tools, and more developer-focused content.</p>
+    </style>
+  </head>
+  <body>
+    <div class="min-h-screen flex flex-col">
+      <header class="w-full py-6 bg-white shadow-sm">
+        <div class="container mx-auto px-4 flex justify-center">
+          <div class="flex flex-col items-center">
+            <img
+              src="https://wexlm.github.io/assets/wexlm.png"
+              alt="WEXLM Logo"
+              class="h-24 mb-4"
+            />
+            <h1 class="text-3xl font-bold gradient-text">WEXLM</h1>
+            <p class="text-gray-600 text-center mt-2 max-w-2xl">
+              Smart Contract Utilities for Assets on Stellar Blockchain
+              (XLM-based)
+            </p>
+          </div>
+        </div>
+      </header>
 
-    <form class="email-form">
-      <input type="email" placeholder="Enter your email" required />
-      <button type="submit">Notify Me</button>
-    </form>
+      <main class="flex-grow container mx-auto px-4 py-8">
+        <div class="max-w-4xl mx-auto">
+          <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+            <h2 class="text-2xl font-bold mb-6 text-gray-800 border-b pb-3">
+              Token Details
+            </h2>
 
-    <footer>&copy; 2025 WEXLM - All rights reserved</footer>
-  </div>
-</body>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <div class="mb-4">
+                  <p class="text-sm text-gray-500">Token Code</p>
+                  <p class="font-medium text-gray-800">WEXLM</p>
+                </div>
+
+                <div class="mb-4">
+                  <p class="text-sm text-gray-500">Name</p>
+                  <p class="font-medium text-gray-800">WEXLM</p>
+                </div>
+
+                <div class="mb-4">
+                  <p class="text-sm text-gray-500">Status</p>
+                  <span
+                    class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800"
+                  >
+                    Live
+                  </span>
+                </div>
+
+                <div class="mb-4">
+                  <p class="text-sm text-gray-500">Display Decimals</p>
+                  <p class="font-medium text-gray-800">7</p>
+                </div>
+              </div>
+
+              <div>
+                <div class="mb-4">
+                  <p class="text-sm text-gray-500">Total Supply</p>
+                  <p class="font-medium text-gray-800">1,000,000,000 WEXLM</p>
+                </div>
+
+                <div class="mb-4">
+                  <p class="text-sm text-gray-500">Asset Anchored</p>
+                  <p class="font-medium text-gray-800">No</p>
+                </div>
+
+                <div class="mb-4">
+                  <p class="text-sm text-gray-500">Organization</p>
+                  <p class="font-medium text-gray-800">WEXLM</p>
+                </div>
+
+                <div class="mb-4">
+                  <p class="text-sm text-gray-500">Location</p>
+                  <p class="font-medium text-gray-800">
+                    88 Colin P Kelly Jr St, San Francisco, CA 94107, USA
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+            <h2 class="text-2xl font-bold mb-6 text-gray-800 border-b pb-3">
+              Issuer Information
+            </h2>
+
+            <div class="mb-6">
+              <p class="text-sm text-gray-500 mb-1">Issuer Address</p>
+              <div class="flex items-center">
+                <code
+                  class="bg-gray-100 p-3 rounded text-sm text-gray-800 flex-grow overflow-x-auto"
+                  >GBYGO5OUQW7SNTB3HKDACAYO7VCWGJTBBPQNMATJ7H6KS62V4USDU4WV</code
+                >
+                <button
+                  id="copyIssuerBtn"
+                  class="ml-2 p-2 text-primary hover:text-primary/80 rounded-button whitespace-nowrap flex items-center justify-center"
+                >
+                  <i class="ri-file-copy-line ri-lg"></i>
+                </button>
+              </div>
+            </div>
+
+            <div>
+              <p class="text-sm text-gray-500 mb-1">Official Website</p>
+              <a
+                href="https://wexlm.github.io/"
+                target="_blank"
+                class="text-primary hover:underline flex items-center"
+              >
+                <span>https://wexlm.github.io/</span>
+                <i class="ri-external-link-line ml-1"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+            <h2 class="text-2xl font-bold mb-6 text-gray-800 border-b pb-3">
+              About WEXLM
+            </h2>
+
+            <div class="prose max-w-none text-gray-700">
+              <p class="mb-4">
+                WEXLM is a trusted leader in innovative financial solutions,
+                dedicated to providing secure, reliable, and efficient services
+                that meet our customers' needs. Our commitment to transparency
+                and excellence ensures you can confidently partner with us for
+                your financial success.
+              </p>
+              <p>
+                WEXLM is a technical token designed to facilitate secure and
+                efficient transactions within the WEXLM ecosystem. It serves as
+                the primary digital asset for powering decentralized
+                applications, enabling fast, low-cost transfers, and supporting
+                the platform's infrastructure for scalable blockchain solutions.
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-md p-8">
+            <h2 class="text-2xl font-bold mb-6 text-gray-800 border-b pb-3">
+              Trade WEXLM
+            </h2>
+
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+              <a
+                href="https://lobstr.co/trade/WEXLM:GBYGO5OUQW7SNTB3HKDACAYO7VCWGJTBBPQNMATJ7H6KS62V4USDU4WV"
+                target="_blank"
+                class="gold-gradient text-white py-3 px-6 rounded-button font-medium flex items-center justify-center whitespace-nowrap"
+              >
+                <i class="ri-exchange-line mr-2 ri-lg"></i>
+                Trade on LOBSTR
+              </a>
+              <a
+                href="https://stellarterm.com/exchange/WEXLM-GBYGO5OUQW7SNTB3HKDACAYO7VCWGJTBBPQNMATJ7H6KS62V4USDU4WV/XLM-native"
+                target="_blank"
+                class="border border-primary text-primary hover:bg-primary/5 py-3 px-6 rounded-button font-medium flex items-center justify-center whitespace-nowrap"
+              >
+                <i class="ri-exchange-line mr-2 ri-lg"></i>
+                Trade on StellarTerm
+              </a>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="w-full py-6 bg-gray-50 border-t border-gray-200">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-col items-center">
+            <p class="text-gray-600 mb-2">
+              Contact:
+              <a
+                href="mailto:wexlm@proton.me"
+                class="text-primary hover:underline"
+                >wexlm@proton.me</a
+              >
+            </p>
+            <p class="text-gray-500 text-sm">
+              &copy; 2025 WEXLM. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script id="copyFunctionality">
+      document.addEventListener("DOMContentLoaded", function () {
+        const copyIssuerBtn = document.getElementById("copyIssuerBtn");
+
+        copyIssuerBtn.addEventListener("click", function () {
+          const issuerAddress =
+            "GBYGO5OUQW7SNTB3HKDACAYO7VCWGJTBBPQNMATJ7H6KS62V4USDU4WV";
+          navigator.clipboard.writeText(issuerAddress).then(function () {
+            // Change icon temporarily to show success
+            const icon = copyIssuerBtn.querySelector("i");
+            icon.className = "ri-check-line ri-lg";
+
+            setTimeout(function () {
+              icon.className = "ri-file-copy-line ri-lg";
+            }, 2000);
+          });
+        });
+      });
+    </script>
+  </body>
 </html>
